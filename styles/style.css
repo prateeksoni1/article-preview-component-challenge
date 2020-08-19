@@ -87,7 +87,7 @@ body .card .drawers img {
 }
 
 body .card .content {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 body .card .content .text {
@@ -152,18 +152,7 @@ body .card .content .contact .contact-info .name {
 }
 
 body .card .content .share {
-  background-color: #ecf2f8;
-  height: 36px;
-  width: 36px;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  border-radius: 18px;
   position: relative;
-}
-
-body .card .content .share:hover {
-  cursor: pointer;
 }
 
 body .card .content .share .show-tooltip {
@@ -174,7 +163,7 @@ body .card .content .share .show-tooltip {
 
 body .card .content .share .share-buttons-container {
   cursor: auto;
-  z-index: 1000;
+  z-index: 2;
   min-width: 250px;
   position: absolute;
   padding: 1rem;
@@ -188,6 +177,21 @@ body .card .content .share .share-buttons-container {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   border-radius: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  body .card .content .share .share-buttons-container {
+    width: 90vw;
+    top: -1rem;
+    right: -1rem;
+    padding: 1.7rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  body .card .content .share .share-buttons-container * {
+    margin-right: 2rem;
+  }
 }
 
 body .card .content .share .share-buttons-container .label {
@@ -211,11 +215,39 @@ body .card .content .share .share-buttons-container::before {
           transform: rotate(45deg);
 }
 
-body .card .content .share.showTooltip {
+@media only screen and (max-width: 1000px) {
+  body .card .content .share .share-buttons-container::before {
+    display: none;
+  }
+}
+
+body .card .content .share .share-btn {
+  background-color: #ecf2f8;
+  height: 36px;
+  width: 36px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  position: relative;
+  z-index: 100;
+}
+
+body .card .content .share .share-btn:hover {
+  cursor: pointer;
+}
+
+body .card .content .share .share-btn.showTooltip {
   background-color: #48556a;
 }
 
-body .card .content .share.showTooltip svg {
+@media only screen and (max-width: 1000px) {
+  body .card .content .share .share-btn.showTooltip {
+    background-color: #9eafc2;
+  }
+}
+
+body .card .content .share .share-btn.showTooltip svg {
   fill: #fff;
 }
 
