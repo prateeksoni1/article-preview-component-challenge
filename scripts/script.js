@@ -1,4 +1,4 @@
-const toggleShare = () => {
+const toggleShare = function () {
   const shareBtn = document.querySelector(".share-btn");
   const tooltip = document.querySelector(".share-buttons-container");
   shareBtn.classList.toggle("showTooltip");
