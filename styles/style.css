@@ -7,6 +7,10 @@
   color: #5f5f5f;
 }
 
+html {
+  font-size: 13px;
+}
+
 body {
   min-height: 100vh;
   display: -webkit-box;
@@ -22,7 +26,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 13px;
   font-weight: 500;
   background-color: #ecf2f8;
 }
@@ -43,6 +46,16 @@ body .card {
       grid-template-columns: 1fr 2fr;
   -webkit-box-shadow: 0px 0px 20px 0px #9eafc2;
           box-shadow: 0px 0px 20px 0px #9eafc2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+  body .card {
+    width: 90%;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
 }
 
 body .card .grid-item {
@@ -66,6 +79,12 @@ body .card .drawers img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media only screen and (max-width: 1000px) {
+  body .card .drawers img {
+    height: 250px;
+  }
 }
 
 body .card .content {
