@@ -162,16 +162,25 @@ body .card .content .share {
   position: relative;
 }
 
+body .card .content .share:hover {
+  cursor: pointer;
+}
+
+body .card .content .share .show-tooltip {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
 body .card .content .share .share-buttons-container {
+  cursor: auto;
   z-index: 1000;
   min-width: 250px;
   position: absolute;
   padding: 1rem;
   top: -70px;
   background-color: #48556a;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -185,6 +194,10 @@ body .card .content .share .share-buttons-container .label {
   color: #9eafc2;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+}
+
+body .card .content .share .share-buttons-container img {
+  cursor: pointer;
 }
 
 body .card .content .share .share-buttons-container::before {
@@ -210,10 +223,6 @@ body .card .content .share svg {
   height: 14px;
   width: 14px;
   fill: #6e8098;
-}
-
-body .card .content .share svg:hover {
-  cursor: pointer;
 }
 
 .attribution {
