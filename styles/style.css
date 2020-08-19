@@ -47,7 +47,6 @@ body .card {
   -webkit-box-shadow: 0px 0px 20px 0px #9eafc2;
           box-shadow: 0px 0px 20px 0px #9eafc2;
   border-radius: 10px;
-  overflow: hidden;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -160,12 +159,61 @@ body .card .content .share {
   display: grid;
   place-items: center;
   border-radius: 18px;
-  overflow: hidden;
+  position: relative;
 }
 
-body .card .content .share img {
+body .card .content .share .share-buttons-container {
+  z-index: 1000;
+  min-width: 250px;
+  position: absolute;
+  padding: 1rem;
+  top: -70px;
+  background-color: #48556a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-radius: 10px;
+}
+
+body .card .content .share .share-buttons-container .label {
+  color: #9eafc2;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+body .card .content .share .share-buttons-container::before {
+  content: " ";
+  background-color: #48556a;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  bottom: -5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body .card .content .share.showTooltip {
+  background-color: #48556a;
+}
+
+body .card .content .share.showTooltip svg {
+  fill: #fff;
+}
+
+body .card .content .share svg {
   height: 14px;
   width: 14px;
+  fill: #6e8098;
+}
+
+body .card .content .share svg:hover {
+  cursor: pointer;
 }
 
 .attribution {
